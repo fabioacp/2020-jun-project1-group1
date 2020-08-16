@@ -127,7 +127,7 @@ kick-n-run:
 	@$(DOCKER_RUNNER) ci-terraform apply -auto-approve -var-file=main.tfvars -target=module.container_registry
 	$(MAKE) update-wp
 	@$(DOCKER_RUNNER) ci-terraform apply -auto-approve -var-file=main.tfvars 
-	$(MAKE) wait-lb
+	#$(MAKE) wait-lb
 .PHONY:kick-n-run
 
 wait-lb:
